@@ -1,0 +1,889 @@
+{
+  "siteId": "pantry",
+  "startedAt": "2026-10-19T12:47:21.515Z",
+  "steps": [
+    {
+      "index": 0,
+      "action": {
+        "type": "select",
+        "selector": "#search-menu-diet",
+        "value": "vegetarian"
+      },
+      "title": "Weeknight Pantry",
+      "forms": [
+        {
+          "selector": "#search-menu",
+          "id": "search-menu",
+          "toolTitle": "Search menu",
+          "submitLabel": "Show dishes",
+          "resultTarget": "menu-results",
+          "fields": [
+            {
+              "name": "diet",
+              "tag": "select",
+              "type": "select-one",
+              "required": true,
+              "label": "Diet",
+              "options": [
+                {
+                  "value": "vegetarian",
+                  "label": "Vegetarian"
+                },
+                {
+                  "value": "fish",
+                  "label": "Fish"
+                }
+              ],
+              "value": "vegetarian",
+              "min": null,
+              "max": null,
+              "valueType": null
+            }
+          ]
+        },
+        {
+          "selector": "#place-pantry-order",
+          "id": "place-pantry-order",
+          "toolTitle": "Place pantry order",
+          "submitLabel": "Place order",
+          "resultTarget": "outcome",
+          "fields": [
+            {
+              "name": "item",
+              "tag": "select",
+              "type": "select-one",
+              "required": true,
+              "label": "Dish",
+              "options": [
+                {
+                  "value": "lentil",
+                  "label": "Lentil Stew"
+                },
+                {
+                  "value": "trout",
+                  "label": "Pan Trout"
+                },
+                {
+                  "value": "greens",
+                  "label": "Sesame Greens"
+                }
+              ],
+              "value": "lentil",
+              "min": null,
+              "max": null,
+              "valueType": null
+            },
+            {
+              "name": "qty",
+              "tag": "input",
+              "type": "number",
+              "required": true,
+              "label": "Quantity",
+              "value": "",
+              "min": "1",
+              "max": "6",
+              "valueType": null
+            },
+            {
+              "name": "name",
+              "tag": "input",
+              "type": "text",
+              "required": true,
+              "label": "Name",
+              "value": "",
+              "min": null,
+              "max": null,
+              "valueType": null
+            },
+            {
+              "name": "phone",
+              "tag": "input",
+              "type": "tel",
+              "required": true,
+              "label": "Phone",
+              "value": "",
+              "min": null,
+              "max": null,
+              "valueType": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "action": {
+        "type": "click",
+        "selector": "#search-menu button[type=submit]"
+      },
+      "title": "Weeknight Pantry",
+      "forms": [
+        {
+          "selector": "#search-menu",
+          "id": "search-menu",
+          "toolTitle": "Search menu",
+          "submitLabel": "Show dishes",
+          "resultTarget": "menu-results",
+          "fields": [
+            {
+              "name": "diet",
+              "tag": "select",
+              "type": "select-one",
+              "required": true,
+              "label": "Diet",
+              "options": [
+                {
+                  "value": "vegetarian",
+                  "label": "Vegetarian"
+                },
+                {
+                  "value": "fish",
+                  "label": "Fish"
+                }
+              ],
+              "value": "vegetarian",
+              "min": null,
+              "max": null,
+              "valueType": null
+            }
+          ]
+        },
+        {
+          "selector": "#place-pantry-order",
+          "id": "place-pantry-order",
+          "toolTitle": "Place pantry order",
+          "submitLabel": "Place order",
+          "resultTarget": "outcome",
+          "fields": [
+            {
+              "name": "item",
+              "tag": "select",
+              "type": "select-one",
+              "required": true,
+              "label": "Dish",
+              "options": [
+                {
+                  "value": "lentil",
+                  "label": "Lentil Stew"
+                },
+                {
+                  "value": "trout",
+                  "label": "Pan Trout"
+                },
+                {
+                  "value": "greens",
+                  "label": "Sesame Greens"
+                }
+              ],
+              "value": "lentil",
+              "min": null,
+              "max": null,
+              "valueType": null
+            },
+            {
+              "name": "qty",
+              "tag": "input",
+              "type": "number",
+              "required": true,
+              "label": "Quantity",
+              "value": "",
+              "min": "1",
+              "max": "6",
+              "valueType": null
+            },
+            {
+              "name": "name",
+              "tag": "input",
+              "type": "text",
+              "required": true,
+              "label": "Name",
+              "value": "",
+              "min": null,
+              "max": null,
+              "valueType": null
+            },
+            {
+              "name": "phone",
+              "tag": "input",
+              "type": "tel",
+              "required": true,
+              "label": "Phone",
+              "value": "",
+              "min": null,
+              "max": null,
+              "valueType": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "action": {
+        "type": "click",
+        "selector": "[data-nav=order]"
+      },
+      "title": "Weeknight Pantry",
+      "forms": [
+        {
+          "selector": "#search-menu",
+          "id": "search-menu",
+          "toolTitle": "Search menu",
+          "submitLabel": "Show dishes",
+          "resultTarget": "menu-results",
+          "fields": [
+            {
+              "name": "diet",
+              "tag": "select",
+              "type": "select-one",
+              "required": true,
+              "label": "Diet",
+              "options": [
+                {
+                  "value": "vegetarian",
+                  "label": "Vegetarian"
+                },
+                {
+                  "value": "fish",
+                  "label": "Fish"
+                }
+              ],
+              "value": "vegetarian",
+              "min": null,
+              "max": null,
+              "valueType": null
+            }
+          ]
+        },
+        {
+          "selector": "#place-pantry-order",
+          "id": "place-pantry-order",
+          "toolTitle": "Place pantry order",
+          "submitLabel": "Place order",
+          "resultTarget": "outcome",
+          "fields": [
+            {
+              "name": "item",
+              "tag": "select",
+              "type": "select-one",
+              "required": true,
+              "label": "Dish",
+              "options": [
+                {
+                  "value": "lentil",
+                  "label": "Lentil Stew"
+                },
+                {
+                  "value": "trout",
+                  "label": "Pan Trout"
+                },
+                {
+                  "value": "greens",
+                  "label": "Sesame Greens"
+                }
+              ],
+              "value": "lentil",
+              "min": null,
+              "max": null,
+              "valueType": null
+            },
+            {
+              "name": "qty",
+              "tag": "input",
+              "type": "number",
+              "required": true,
+              "label": "Quantity",
+              "value": "",
+              "min": "1",
+              "max": "6",
+              "valueType": null
+            },
+            {
+              "name": "name",
+              "tag": "input",
+              "type": "text",
+              "required": true,
+              "label": "Name",
+              "value": "",
+              "min": null,
+              "max": null,
+              "valueType": null
+            },
+            {
+              "name": "phone",
+              "tag": "input",
+              "type": "tel",
+              "required": true,
+              "label": "Phone",
+              "value": "",
+              "min": null,
+              "max": null,
+              "valueType": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "action": {
+        "type": "select",
+        "selector": "#place-pantry-order-item",
+        "value": "lentil"
+      },
+      "title": "Weeknight Pantry",
+      "forms": [
+        {
+          "selector": "#search-menu",
+          "id": "search-menu",
+          "toolTitle": "Search menu",
+          "submitLabel": "Show dishes",
+          "resultTarget": "menu-results",
+          "fields": [
+            {
+              "name": "diet",
+              "tag": "select",
+              "type": "select-one",
+              "required": true,
+              "label": "Diet",
+              "options": [
+                {
+                  "value": "vegetarian",
+                  "label": "Vegetarian"
+                },
+                {
+                  "value": "fish",
+                  "label": "Fish"
+                }
+              ],
+              "value": "vegetarian",
+              "min": null,
+              "max": null,
+              "valueType": null
+            }
+          ]
+        },
+        {
+          "selector": "#place-pantry-order",
+          "id": "place-pantry-order",
+          "toolTitle": "Place pantry order",
+          "submitLabel": "Place order",
+          "resultTarget": "outcome",
+          "fields": [
+            {
+              "name": "item",
+              "tag": "select",
+              "type": "select-one",
+              "required": true,
+              "label": "Dish",
+              "options": [
+                {
+                  "value": "lentil",
+                  "label": "Lentil Stew"
+                },
+                {
+                  "value": "trout",
+                  "label": "Pan Trout"
+                },
+                {
+                  "value": "greens",
+                  "label": "Sesame Greens"
+                }
+              ],
+              "value": "lentil",
+              "min": null,
+              "max": null,
+              "valueType": null
+            },
+            {
+              "name": "qty",
+              "tag": "input",
+              "type": "number",
+              "required": true,
+              "label": "Quantity",
+              "value": "",
+              "min": "1",
+              "max": "6",
+              "valueType": null
+            },
+            {
+              "name": "name",
+              "tag": "input",
+              "type": "text",
+              "required": true,
+              "label": "Name",
+              "value": "",
+              "min": null,
+              "max": null,
+              "valueType": null
+            },
+            {
+              "name": "phone",
+              "tag": "input",
+              "type": "tel",
+              "required": true,
+              "label": "Phone",
+              "value": "",
+              "min": null,
+              "max": null,
+              "valueType": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "action": {
+        "type": "fill",
+        "selector": "#place-pantry-order-qty",
+        "value": "2"
+      },
+      "title": "Weeknight Pantry",
+      "forms": [
+        {
+          "selector": "#search-menu",
+          "id": "search-menu",
+          "toolTitle": "Search menu",
+          "submitLabel": "Show dishes",
+          "resultTarget": "menu-results",
+          "fields": [
+            {
+              "name": "diet",
+              "tag": "select",
+              "type": "select-one",
+              "required": true,
+              "label": "Diet",
+              "options": [
+                {
+                  "value": "vegetarian",
+                  "label": "Vegetarian"
+                },
+                {
+                  "value": "fish",
+                  "label": "Fish"
+                }
+              ],
+              "value": "vegetarian",
+              "min": null,
+              "max": null,
+              "valueType": null
+            }
+          ]
+        },
+        {
+          "selector": "#place-pantry-order",
+          "id": "place-pantry-order",
+          "toolTitle": "Place pantry order",
+          "submitLabel": "Place order",
+          "resultTarget": "outcome",
+          "fields": [
+            {
+              "name": "item",
+              "tag": "select",
+              "type": "select-one",
+              "required": true,
+              "label": "Dish",
+              "options": [
+                {
+                  "value": "lentil",
+                  "label": "Lentil Stew"
+                },
+                {
+                  "value": "trout",
+                  "label": "Pan Trout"
+                },
+                {
+                  "value": "greens",
+                  "label": "Sesame Greens"
+                }
+              ],
+              "value": "lentil",
+              "min": null,
+              "max": null,
+              "valueType": null
+            },
+            {
+              "name": "qty",
+              "tag": "input",
+              "type": "number",
+              "required": true,
+              "label": "Quantity",
+              "value": "2",
+              "min": "1",
+              "max": "6",
+              "valueType": null
+            },
+            {
+              "name": "name",
+              "tag": "input",
+              "type": "text",
+              "required": true,
+              "label": "Name",
+              "value": "",
+              "min": null,
+              "max": null,
+              "valueType": null
+            },
+            {
+              "name": "phone",
+              "tag": "input",
+              "type": "tel",
+              "required": true,
+              "label": "Phone",
+              "value": "",
+              "min": null,
+              "max": null,
+              "valueType": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "action": {
+        "type": "fill",
+        "selector": "#place-pantry-order-name",
+        "value": "Ada Lovelace"
+      },
+      "title": "Weeknight Pantry",
+      "forms": [
+        {
+          "selector": "#search-menu",
+          "id": "search-menu",
+          "toolTitle": "Search menu",
+          "submitLabel": "Show dishes",
+          "resultTarget": "menu-results",
+          "fields": [
+            {
+              "name": "diet",
+              "tag": "select",
+              "type": "select-one",
+              "required": true,
+              "label": "Diet",
+              "options": [
+                {
+                  "value": "vegetarian",
+                  "label": "Vegetarian"
+                },
+                {
+                  "value": "fish",
+                  "label": "Fish"
+                }
+              ],
+              "value": "vegetarian",
+              "min": null,
+              "max": null,
+              "valueType": null
+            }
+          ]
+        },
+        {
+          "selector": "#place-pantry-order",
+          "id": "place-pantry-order",
+          "toolTitle": "Place pantry order",
+          "submitLabel": "Place order",
+          "resultTarget": "outcome",
+          "fields": [
+            {
+              "name": "item",
+              "tag": "select",
+              "type": "select-one",
+              "required": true,
+              "label": "Dish",
+              "options": [
+                {
+                  "value": "lentil",
+                  "label": "Lentil Stew"
+                },
+                {
+                  "value": "trout",
+                  "label": "Pan Trout"
+                },
+                {
+                  "value": "greens",
+                  "label": "Sesame Greens"
+                }
+              ],
+              "value": "lentil",
+              "min": null,
+              "max": null,
+              "valueType": null
+            },
+            {
+              "name": "qty",
+              "tag": "input",
+              "type": "number",
+              "required": true,
+              "label": "Quantity",
+              "value": "2",
+              "min": "1",
+              "max": "6",
+              "valueType": null
+            },
+            {
+              "name": "name",
+              "tag": "input",
+              "type": "text",
+              "required": true,
+              "label": "Name",
+              "value": "Ada Lovelace",
+              "min": null,
+              "max": null,
+              "valueType": null
+            },
+            {
+              "name": "phone",
+              "tag": "input",
+              "type": "tel",
+              "required": true,
+              "label": "Phone",
+              "value": "",
+              "min": null,
+              "max": null,
+              "valueType": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "action": {
+        "type": "fill",
+        "selector": "#place-pantry-order-phone",
+        "value": "206-555-0142"
+      },
+      "title": "Weeknight Pantry",
+      "forms": [
+        {
+          "selector": "#search-menu",
+          "id": "search-menu",
+          "toolTitle": "Search menu",
+          "submitLabel": "Show dishes",
+          "resultTarget": "menu-results",
+          "fields": [
+            {
+              "name": "diet",
+              "tag": "select",
+              "type": "select-one",
+              "required": true,
+              "label": "Diet",
+              "options": [
+                {
+                  "value": "vegetarian",
+                  "label": "Vegetarian"
+                },
+                {
+                  "value": "fish",
+                  "label": "Fish"
+                }
+              ],
+              "value": "vegetarian",
+              "min": null,
+              "max": null,
+              "valueType": null
+            }
+          ]
+        },
+        {
+          "selector": "#place-pantry-order",
+          "id": "place-pantry-order",
+          "toolTitle": "Place pantry order",
+          "submitLabel": "Place order",
+          "resultTarget": "outcome",
+          "fields": [
+            {
+              "name": "item",
+              "tag": "select",
+              "type": "select-one",
+              "required": true,
+              "label": "Dish",
+              "options": [
+                {
+                  "value": "lentil",
+                  "label": "Lentil Stew"
+                },
+                {
+                  "value": "trout",
+                  "label": "Pan Trout"
+                },
+                {
+                  "value": "greens",
+                  "label": "Sesame Greens"
+                }
+              ],
+              "value": "lentil",
+              "min": null,
+              "max": null,
+              "valueType": null
+            },
+            {
+              "name": "qty",
+              "tag": "input",
+              "type": "number",
+              "required": true,
+              "label": "Quantity",
+              "value": "2",
+              "min": "1",
+              "max": "6",
+              "valueType": null
+            },
+            {
+              "name": "name",
+              "tag": "input",
+              "type": "text",
+              "required": true,
+              "label": "Name",
+              "value": "Ada Lovelace",
+              "min": null,
+              "max": null,
+              "valueType": null
+            },
+            {
+              "name": "phone",
+              "tag": "input",
+              "type": "tel",
+              "required": true,
+              "label": "Phone",
+              "value": "206-555-0142",
+              "min": null,
+              "max": null,
+              "valueType": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "action": {
+        "type": "click",
+        "selector": "#place-pantry-order button[type=submit]"
+      },
+      "title": "Weeknight Pantry",
+      "forms": [
+        {
+          "selector": "#search-menu",
+          "id": "search-menu",
+          "toolTitle": "Search menu",
+          "submitLabel": "Show dishes",
+          "resultTarget": "menu-results",
+          "fields": [
+            {
+              "name": "diet",
+              "tag": "select",
+              "type": "select-one",
+              "required": true,
+              "label": "Diet",
+              "options": [
+                {
+                  "value": "vegetarian",
+                  "label": "Vegetarian"
+                },
+                {
+                  "value": "fish",
+                  "label": "Fish"
+                }
+              ],
+              "value": "vegetarian",
+              "min": null,
+              "max": null,
+              "valueType": null
+            }
+          ]
+        },
+        {
+          "selector": "#place-pantry-order",
+          "id": "place-pantry-order",
+          "toolTitle": "Place pantry order",
+          "submitLabel": "Place order",
+          "resultTarget": "outcome",
+          "fields": [
+            {
+              "name": "item",
+              "tag": "select",
+              "type": "select-one",
+              "required": true,
+              "label": "Dish",
+              "options": [
+                {
+                  "value": "lentil",
+                  "label": "Lentil Stew"
+                },
+                {
+                  "value": "trout",
+                  "label": "Pan Trout"
+                },
+                {
+                  "value": "greens",
+                  "label": "Sesame Greens"
+                }
+              ],
+              "value": "lentil",
+              "min": null,
+              "max": null,
+              "valueType": null
+            },
+            {
+              "name": "qty",
+              "tag": "input",
+              "type": "number",
+              "required": true,
+              "label": "Quantity",
+              "value": "2",
+              "min": "1",
+              "max": "6",
+              "valueType": null
+            },
+            {
+              "name": "name",
+              "tag": "input",
+              "type": "text",
+              "required": true,
+              "label": "Name",
+              "value": "Ada Lovelace",
+              "min": null,
+              "max": null,
+              "valueType": null
+            },
+            {
+              "name": "phone",
+              "tag": "input",
+              "type": "tel",
+              "required": true,
+              "label": "Phone",
+              "value": "206-555-0142",
+              "min": null,
+              "max": null,
+              "valueType": null
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "requests": [
+    {
+      "afterStep": 1,
+      "transport": "fetch",
+      "method": "GET",
+      "pathname": "/api/menu",
+      "search": "?diet=vegetarian",
+      "requestBody": null,
+      "status": 200,
+      "responseBody": "{\"items\":[{\"id\":\"lentil\",\"name\":\"Lentil Stew\",\"diet\":\"vegetarian\",\"price\":12},{\"id\":\"greens\",\"name\":\"Sesame Greens\",\"diet\":\"vegetarian\",\"price\":9}]}"
+    },
+    {
+      "afterStep": 7,
+      "transport": "fetch",
+      "method": "POST",
+      "pathname": "/api/orders",
+      "search": "",
+      "requestBody": "{\"item\":\"lentil\",\"qty\":2,\"name\":\"Ada Lovelace\",\"phone\":\"206-555-0142\"}",
+      "status": 201,
+      "responseBody": "{\"receipt\":{\"id\":\"WP-701\",\"item\":\"lentil\",\"qty\":2,\"name\":\"Ada Lovelace\",\"total\":24}}"
+    }
+  ]
+}

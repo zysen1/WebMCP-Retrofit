@@ -1,0 +1,25 @@
+{
+  "name": "webmcp-retrofit",
+  "version": "0.1.0",
+  "description": "Record a real browser flow and derive injectable WebMCP tools, handlers, and contract tests.",
+  "type": "module",
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "demo": "tsx src/cli.ts demo",
+    "serve": "tsx src/cli.ts serve",
+    "test": "tsx --test tests/unit/*.test.ts tests/pipeline.test.ts",
+    "test:unit": "tsx --test tests/unit/*.test.ts",
+    "test:contracts": "tsx --test generated/*/*.test.ts",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.21",
+    "esbuild": "^0.25.5",
+    "playwright": "^1.56.1",
+    "tsx": "^4.20.3",
+    "typescript": "^5.9.2"
+  }
+}

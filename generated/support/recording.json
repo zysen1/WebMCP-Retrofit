@@ -1,0 +1,536 @@
+{
+  "siteId": "support",
+  "startedAt": "2026-10-19T12:47:20.649Z",
+  "steps": [
+    {
+      "index": 0,
+      "action": {
+        "type": "fill",
+        "selector": "#search-articles-q",
+        "value": "refund"
+      },
+      "title": "Lumen Desk",
+      "forms": [
+        {
+          "selector": "#search-articles",
+          "id": "search-articles",
+          "toolTitle": "Search articles",
+          "submitLabel": "Search",
+          "resultTarget": "article-results",
+          "fields": [
+            {
+              "name": "q",
+              "tag": "input",
+              "type": "text",
+              "required": true,
+              "label": "Question",
+              "value": "refund",
+              "min": null,
+              "max": null,
+              "valueType": null
+            }
+          ]
+        },
+        {
+          "selector": "#file-ticket",
+          "id": "file-ticket",
+          "toolTitle": "File ticket",
+          "submitLabel": "File ticket",
+          "resultTarget": "outcome",
+          "fields": [
+            {
+              "name": "email",
+              "tag": "input",
+              "type": "email",
+              "required": true,
+              "label": "Email",
+              "value": "",
+              "min": null,
+              "max": null,
+              "valueType": null
+            },
+            {
+              "name": "subject",
+              "tag": "input",
+              "type": "text",
+              "required": true,
+              "label": "Subject",
+              "value": "",
+              "min": null,
+              "max": null,
+              "valueType": null
+            },
+            {
+              "name": "body",
+              "tag": "textarea",
+              "type": "textarea",
+              "required": true,
+              "label": "What happened",
+              "value": "",
+              "min": null,
+              "max": null,
+              "valueType": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "action": {
+        "type": "click",
+        "selector": "#search-articles button[type=submit]"
+      },
+      "title": "Lumen Desk",
+      "forms": [
+        {
+          "selector": "#search-articles",
+          "id": "search-articles",
+          "toolTitle": "Search articles",
+          "submitLabel": "Search",
+          "resultTarget": "article-results",
+          "fields": [
+            {
+              "name": "q",
+              "tag": "input",
+              "type": "text",
+              "required": true,
+              "label": "Question",
+              "value": "refund",
+              "min": null,
+              "max": null,
+              "valueType": null
+            }
+          ]
+        },
+        {
+          "selector": "#file-ticket",
+          "id": "file-ticket",
+          "toolTitle": "File ticket",
+          "submitLabel": "File ticket",
+          "resultTarget": "outcome",
+          "fields": [
+            {
+              "name": "email",
+              "tag": "input",
+              "type": "email",
+              "required": true,
+              "label": "Email",
+              "value": "",
+              "min": null,
+              "max": null,
+              "valueType": null
+            },
+            {
+              "name": "subject",
+              "tag": "input",
+              "type": "text",
+              "required": true,
+              "label": "Subject",
+              "value": "",
+              "min": null,
+              "max": null,
+              "valueType": null
+            },
+            {
+              "name": "body",
+              "tag": "textarea",
+              "type": "textarea",
+              "required": true,
+              "label": "What happened",
+              "value": "",
+              "min": null,
+              "max": null,
+              "valueType": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "action": {
+        "type": "click",
+        "selector": "[data-nav=ticket]"
+      },
+      "title": "Lumen Desk",
+      "forms": [
+        {
+          "selector": "#search-articles",
+          "id": "search-articles",
+          "toolTitle": "Search articles",
+          "submitLabel": "Search",
+          "resultTarget": "article-results",
+          "fields": [
+            {
+              "name": "q",
+              "tag": "input",
+              "type": "text",
+              "required": true,
+              "label": "Question",
+              "value": "refund",
+              "min": null,
+              "max": null,
+              "valueType": null
+            }
+          ]
+        },
+        {
+          "selector": "#file-ticket",
+          "id": "file-ticket",
+          "toolTitle": "File ticket",
+          "submitLabel": "File ticket",
+          "resultTarget": "outcome",
+          "fields": [
+            {
+              "name": "email",
+              "tag": "input",
+              "type": "email",
+              "required": true,
+              "label": "Email",
+              "value": "",
+              "min": null,
+              "max": null,
+              "valueType": null
+            },
+            {
+              "name": "subject",
+              "tag": "input",
+              "type": "text",
+              "required": true,
+              "label": "Subject",
+              "value": "",
+              "min": null,
+              "max": null,
+              "valueType": null
+            },
+            {
+              "name": "body",
+              "tag": "textarea",
+              "type": "textarea",
+              "required": true,
+              "label": "What happened",
+              "value": "",
+              "min": null,
+              "max": null,
+              "valueType": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "action": {
+        "type": "fill",
+        "selector": "#file-ticket-email",
+        "value": "ada@analytical.example"
+      },
+      "title": "Lumen Desk",
+      "forms": [
+        {
+          "selector": "#search-articles",
+          "id": "search-articles",
+          "toolTitle": "Search articles",
+          "submitLabel": "Search",
+          "resultTarget": "article-results",
+          "fields": [
+            {
+              "name": "q",
+              "tag": "input",
+              "type": "text",
+              "required": true,
+              "label": "Question",
+              "value": "refund",
+              "min": null,
+              "max": null,
+              "valueType": null
+            }
+          ]
+        },
+        {
+          "selector": "#file-ticket",
+          "id": "file-ticket",
+          "toolTitle": "File ticket",
+          "submitLabel": "File ticket",
+          "resultTarget": "outcome",
+          "fields": [
+            {
+              "name": "email",
+              "tag": "input",
+              "type": "email",
+              "required": true,
+              "label": "Email",
+              "value": "ada@analytical.example",
+              "min": null,
+              "max": null,
+              "valueType": null
+            },
+            {
+              "name": "subject",
+              "tag": "input",
+              "type": "text",
+              "required": true,
+              "label": "Subject",
+              "value": "",
+              "min": null,
+              "max": null,
+              "valueType": null
+            },
+            {
+              "name": "body",
+              "tag": "textarea",
+              "type": "textarea",
+              "required": true,
+              "label": "What happened",
+              "value": "",
+              "min": null,
+              "max": null,
+              "valueType": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "action": {
+        "type": "fill",
+        "selector": "#file-ticket-subject",
+        "value": "Mug arrived cracked"
+      },
+      "title": "Lumen Desk",
+      "forms": [
+        {
+          "selector": "#search-articles",
+          "id": "search-articles",
+          "toolTitle": "Search articles",
+          "submitLabel": "Search",
+          "resultTarget": "article-results",
+          "fields": [
+            {
+              "name": "q",
+              "tag": "input",
+              "type": "text",
+              "required": true,
+              "label": "Question",
+              "value": "refund",
+              "min": null,
+              "max": null,
+              "valueType": null
+            }
+          ]
+        },
+        {
+          "selector": "#file-ticket",
+          "id": "file-ticket",
+          "toolTitle": "File ticket",
+          "submitLabel": "File ticket",
+          "resultTarget": "outcome",
+          "fields": [
+            {
+              "name": "email",
+              "tag": "input",
+              "type": "email",
+              "required": true,
+              "label": "Email",
+              "value": "ada@analytical.example",
+              "min": null,
+              "max": null,
+              "valueType": null
+            },
+            {
+              "name": "subject",
+              "tag": "input",
+              "type": "text",
+              "required": true,
+              "label": "Subject",
+              "value": "Mug arrived cracked",
+              "min": null,
+              "max": null,
+              "valueType": null
+            },
+            {
+              "name": "body",
+              "tag": "textarea",
+              "type": "textarea",
+              "required": true,
+              "label": "What happened",
+              "value": "",
+              "min": null,
+              "max": null,
+              "valueType": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "action": {
+        "type": "fill",
+        "selector": "#file-ticket-body",
+        "value": "The cedar mug arrived with a crack along the glaze."
+      },
+      "title": "Lumen Desk",
+      "forms": [
+        {
+          "selector": "#search-articles",
+          "id": "search-articles",
+          "toolTitle": "Search articles",
+          "submitLabel": "Search",
+          "resultTarget": "article-results",
+          "fields": [
+            {
+              "name": "q",
+              "tag": "input",
+              "type": "text",
+              "required": true,
+              "label": "Question",
+              "value": "refund",
+              "min": null,
+              "max": null,
+              "valueType": null
+            }
+          ]
+        },
+        {
+          "selector": "#file-ticket",
+          "id": "file-ticket",
+          "toolTitle": "File ticket",
+          "submitLabel": "File ticket",
+          "resultTarget": "outcome",
+          "fields": [
+            {
+              "name": "email",
+              "tag": "input",
+              "type": "email",
+              "required": true,
+              "label": "Email",
+              "value": "ada@analytical.example",
+              "min": null,
+              "max": null,
+              "valueType": null
+            },
+            {
+              "name": "subject",
+              "tag": "input",
+              "type": "text",
+              "required": true,
+              "label": "Subject",
+              "value": "Mug arrived cracked",
+              "min": null,
+              "max": null,
+              "valueType": null
+            },
+            {
+              "name": "body",
+              "tag": "textarea",
+              "type": "textarea",
+              "required": true,
+              "label": "What happened",
+              "value": "The cedar mug arrived with a crack along the glaze.",
+              "min": null,
+              "max": null,
+              "valueType": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "action": {
+        "type": "click",
+        "selector": "#file-ticket button[type=submit]"
+      },
+      "title": "Lumen Desk",
+      "forms": [
+        {
+          "selector": "#search-articles",
+          "id": "search-articles",
+          "toolTitle": "Search articles",
+          "submitLabel": "Search",
+          "resultTarget": "article-results",
+          "fields": [
+            {
+              "name": "q",
+              "tag": "input",
+              "type": "text",
+              "required": true,
+              "label": "Question",
+              "value": "refund",
+              "min": null,
+              "max": null,
+              "valueType": null
+            }
+          ]
+        },
+        {
+          "selector": "#file-ticket",
+          "id": "file-ticket",
+          "toolTitle": "File ticket",
+          "submitLabel": "File ticket",
+          "resultTarget": "outcome",
+          "fields": [
+            {
+              "name": "email",
+              "tag": "input",
+              "type": "email",
+              "required": true,
+              "label": "Email",
+              "value": "ada@analytical.example",
+              "min": null,
+              "max": null,
+              "valueType": null
+            },
+            {
+              "name": "subject",
+              "tag": "input",
+              "type": "text",
+              "required": true,
+              "label": "Subject",
+              "value": "Mug arrived cracked",
+              "min": null,
+              "max": null,
+              "valueType": null
+            },
+            {
+              "name": "body",
+              "tag": "textarea",
+              "type": "textarea",
+              "required": true,
+              "label": "What happened",
+              "value": "The cedar mug arrived with a crack along the glaze.",
+              "min": null,
+              "max": null,
+              "valueType": null
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "requests": [
+    {
+      "afterStep": 1,
+      "transport": "fetch",
+      "method": "GET",
+      "pathname": "/api/articles",
+      "search": "?q=refund",
+      "requestBody": null,
+      "status": 200,
+      "responseBody": "{\"articles\":[{\"id\":\"refunds\",\"title\":\"Refunds and returns\"}]}"
+    },
+    {
+      "afterStep": 6,
+      "transport": "xhr",
+      "method": "POST",
+      "pathname": "/api/tickets",
+      "search": "",
+      "requestBody": "{\"email\":\"ada@analytical.example\",\"subject\":\"Mug arrived cracked\",\"body\":\"The cedar mug arrived with a crack along the glaze.\"}",
+      "status": 201,
+      "responseBody": "{\"ticket\":{\"id\":\"LD-801\",\"email\":\"ada@analytical.example\",\"subject\":\"Mug arrived cracked\"}}"
+    }
+  ]
+}

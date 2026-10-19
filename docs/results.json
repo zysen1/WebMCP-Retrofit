@@ -1,0 +1,412 @@
+{
+  "measuredAt": "2026-10-19T12:47:24.038Z",
+  "dataset": "bundled local demo sites: shop, library, support, booking, pantry",
+  "specPin": {
+    "specRepo": "https://github.com/webmachinelearning/webmcp",
+    "specCommit": "f14762e63607bf96592b1a7a6392cd2b047b8209",
+    "specCommitDate": "2026-10-16",
+    "specCommitMessage": "Editorial: sync explainers with spec (#350)",
+    "api": "document.modelContext",
+    "methods": [
+      "registerTool",
+      "getTools",
+      "executeTool"
+    ],
+    "event": "toolchange",
+    "deprecatedAliasNotEmitted": "navigator.modelContext",
+    "removedMethodsNotEmitted": [
+      "provideContext",
+      "clearContext"
+    ],
+    "polyfillPackage": "@mcp-b/webmcp-polyfill",
+    "polyfillVersion": "6.0.3",
+    "polyfillUpstreamRevision": "6bf6c57bbaf3d1173d7737cfb79572632d9b7871",
+    "chromeDocsUpdated": "2026-10-16",
+    "checkedOn": "2026-10-19"
+  },
+  "contracts": {
+    "checks": 93,
+    "passed": 93,
+    "failed": 0,
+    "passRate": 1,
+    "bySite": [
+      {
+        "siteId": "shop",
+        "tools": 3,
+        "checks": 25,
+        "passed": 25,
+        "failed": 0,
+        "passRate": 1
+      },
+      {
+        "siteId": "library",
+        "tools": 2,
+        "checks": 17,
+        "passed": 17,
+        "failed": 0,
+        "passRate": 1
+      },
+      {
+        "siteId": "support",
+        "tools": 2,
+        "checks": 17,
+        "passed": 17,
+        "failed": 0,
+        "passRate": 1
+      },
+      {
+        "siteId": "booking",
+        "tools": 2,
+        "checks": 17,
+        "passed": 17,
+        "failed": 0,
+        "passRate": 1
+      },
+      {
+        "siteId": "pantry",
+        "tools": 2,
+        "checks": 17,
+        "passed": 17,
+        "failed": 0,
+        "passRate": 1
+      }
+    ]
+  },
+  "race": {
+    "goal": {
+      "sku": "cedar-mug",
+      "qty": 2,
+      "email": "ada@analytical.example"
+    },
+    "counting": "A screenshot-and-click step is one captured screenshot or one UI action. A WebMCP step is one tool call. Tool-catalog tokens are included in the WebMCP total and are not an extra step.",
+    "tokenModel": "Text tokens are ceil(chars / 4). Screenshot tokens use the published gpt-4o tile count (85 + 170 per 512px tile after the 2048/768 rescale) plus the accessibility-tree text. These are estimates, not a provider bill.",
+    "screenshot": {
+      "agent": "screenshot",
+      "steps": [
+        {
+          "kind": "screenshot",
+          "detail": "1280x720 plus accessibility text",
+          "tokens": 1243
+        },
+        {
+          "kind": "fill",
+          "detail": "#search-catalog-q = cedar",
+          "tokens": 16
+        },
+        {
+          "kind": "screenshot",
+          "detail": "1280x720 plus accessibility text",
+          "tokens": 1244
+        },
+        {
+          "kind": "select",
+          "detail": "#search-catalog-category = drinkware",
+          "tokens": 19
+        },
+        {
+          "kind": "screenshot",
+          "detail": "1280x720 plus accessibility text",
+          "tokens": 1244
+        },
+        {
+          "kind": "click",
+          "detail": "#search-catalog button[type=submit]",
+          "tokens": 17
+        },
+        {
+          "kind": "screenshot",
+          "detail": "1280x720 plus accessibility text",
+          "tokens": 1255
+        },
+        {
+          "kind": "click",
+          "detail": "[data-open-product=\"cedar-mug\"]",
+          "tokens": 16
+        },
+        {
+          "kind": "screenshot",
+          "detail": "1280x720 plus accessibility text",
+          "tokens": 1302
+        },
+        {
+          "kind": "select",
+          "detail": "#add-to-cart-size = M",
+          "tokens": 15
+        },
+        {
+          "kind": "screenshot",
+          "detail": "1280x720 plus accessibility text",
+          "tokens": 1302
+        },
+        {
+          "kind": "select",
+          "detail": "#add-to-cart-glaze = ash",
+          "tokens": 16
+        },
+        {
+          "kind": "screenshot",
+          "detail": "1280x720 plus accessibility text",
+          "tokens": 1302
+        },
+        {
+          "kind": "fill",
+          "detail": "#add-to-cart-qty = 2",
+          "tokens": 15
+        },
+        {
+          "kind": "screenshot",
+          "detail": "1280x720 plus accessibility text",
+          "tokens": 1303
+        },
+        {
+          "kind": "click",
+          "detail": "#add-to-cart button[type=submit]",
+          "tokens": 16
+        },
+        {
+          "kind": "screenshot",
+          "detail": "1280x720 plus accessibility text",
+          "tokens": 1303
+        },
+        {
+          "kind": "click",
+          "detail": "nav [data-nav=cart]",
+          "tokens": 13
+        },
+        {
+          "kind": "screenshot",
+          "detail": "1280x720 plus accessibility text",
+          "tokens": 1234
+        },
+        {
+          "kind": "click",
+          "detail": "[data-view=cart] [data-nav=checkout]",
+          "tokens": 17
+        },
+        {
+          "kind": "screenshot",
+          "detail": "1280x720 plus accessibility text",
+          "tokens": 1422
+        },
+        {
+          "kind": "fill",
+          "detail": "#place-order-fullName = Ada Lovelace",
+          "tokens": 19
+        },
+        {
+          "kind": "screenshot",
+          "detail": "1280x720 plus accessibility text",
+          "tokens": 1425
+        },
+        {
+          "kind": "fill",
+          "detail": "#place-order-email = ada@analytical.example",
+          "tokens": 20
+        },
+        {
+          "kind": "screenshot",
+          "detail": "1280x720 plus accessibility text",
+          "tokens": 1431
+        },
+        {
+          "kind": "fill",
+          "detail": "#place-order-phone = 206-555-0142",
+          "tokens": 18
+        },
+        {
+          "kind": "screenshot",
+          "detail": "1280x720 plus accessibility text",
+          "tokens": 1435
+        },
+        {
+          "kind": "fill",
+          "detail": "#place-order-address1 = 1 Analytical Engine Way",
+          "tokens": 21
+        },
+        {
+          "kind": "screenshot",
+          "detail": "1280x720 plus accessibility text",
+          "tokens": 1441
+        },
+        {
+          "kind": "fill",
+          "detail": "#place-order-address2 = Apt 4",
+          "tokens": 17
+        },
+        {
+          "kind": "screenshot",
+          "detail": "1280x720 plus accessibility text",
+          "tokens": 1443
+        },
+        {
+          "kind": "fill",
+          "detail": "#place-order-city = Seattle",
+          "tokens": 16
+        },
+        {
+          "kind": "screenshot",
+          "detail": "1280x720 plus accessibility text",
+          "tokens": 1445
+        },
+        {
+          "kind": "select",
+          "detail": "#place-order-region = WA",
+          "tokens": 16
+        },
+        {
+          "kind": "screenshot",
+          "detail": "1280x720 plus accessibility text",
+          "tokens": 1445
+        },
+        {
+          "kind": "fill",
+          "detail": "#place-order-postal = 98101",
+          "tokens": 16
+        },
+        {
+          "kind": "screenshot",
+          "detail": "1280x720 plus accessibility text",
+          "tokens": 1447
+        },
+        {
+          "kind": "select",
+          "detail": "#place-order-shipping = standard",
+          "tokens": 18
+        },
+        {
+          "kind": "screenshot",
+          "detail": "1280x720 plus accessibility text",
+          "tokens": 1447
+        },
+        {
+          "kind": "fill",
+          "detail": "#place-order-cardName = Ada Lovelace",
+          "tokens": 19
+        },
+        {
+          "kind": "screenshot",
+          "detail": "1280x720 plus accessibility text",
+          "tokens": 1451
+        },
+        {
+          "kind": "fill",
+          "detail": "#place-order-cardNumber = 4242424242424242",
+          "tokens": 20
+        },
+        {
+          "kind": "screenshot",
+          "detail": "1280x720 plus accessibility text",
+          "tokens": 1456
+        },
+        {
+          "kind": "fill",
+          "detail": "#place-order-exp = 12/30",
+          "tokens": 16
+        },
+        {
+          "kind": "screenshot",
+          "detail": "1280x720 plus accessibility text",
+          "tokens": 1457
+        },
+        {
+          "kind": "fill",
+          "detail": "#place-order-cvc = 123",
+          "tokens": 15
+        },
+        {
+          "kind": "screenshot",
+          "detail": "1280x720 plus accessibility text",
+          "tokens": 1459
+        },
+        {
+          "kind": "fill",
+          "detail": "#place-order-notes = Leave at the side door",
+          "tokens": 20
+        },
+        {
+          "kind": "screenshot",
+          "detail": "1280x720 plus accessibility text",
+          "tokens": 1465
+        },
+        {
+          "kind": "check",
+          "detail": "#place-order-terms",
+          "tokens": 12
+        },
+        {
+          "kind": "screenshot",
+          "detail": "1280x720 plus accessibility text",
+          "tokens": 1468
+        },
+        {
+          "kind": "click",
+          "detail": "#place-order button[type=submit]",
+          "tokens": 16
+        },
+        {
+          "kind": "screenshot",
+          "detail": "confirmation 1280x720",
+          "tokens": 1264
+        }
+      ],
+      "estimatedTokens": 37572,
+      "catalogTokens": 0,
+      "taskMs": 2014,
+      "screenshots": 27,
+      "toolCalls": 0,
+      "uiActions": 26,
+      "order": {
+        "id": "NW-1002",
+        "sku": "cedar-mug",
+        "qty": 2,
+        "email": "ada@analytical.example",
+        "shipping": "standard",
+        "total": 60
+      },
+      "toolOrder": null
+    },
+    "webmcp": {
+      "agent": "webmcp",
+      "steps": [
+        {
+          "kind": "tool_call",
+          "detail": "search_catalog",
+          "tokens": 70
+        },
+        {
+          "kind": "tool_call",
+          "detail": "add_to_cart",
+          "tokens": 87
+        },
+        {
+          "kind": "tool_call",
+          "detail": "place_order",
+          "tokens": 173
+        }
+      ],
+      "estimatedTokens": 1148,
+      "catalogTokens": 818,
+      "taskMs": 35,
+      "screenshots": 0,
+      "toolCalls": 3,
+      "uiActions": 0,
+      "order": {
+        "id": "NW-1001",
+        "sku": "cedar-mug",
+        "qty": 2,
+        "email": "ada@analytical.example",
+        "shipping": "standard",
+        "total": 60
+      },
+      "toolOrder": {
+        "id": "NW-1001",
+        "sku": "cedar-mug",
+        "qty": 2,
+        "email": "ada@analytical.example",
+        "shipping": "standard",
+        "total": 60
+      }
+    }
+  },
+  "realLlmComparison": "WIP"
+}

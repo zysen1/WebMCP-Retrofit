@@ -1,0 +1,634 @@
+{
+  "siteId": "library",
+  "startedAt": "2026-10-19T12:47:20.249Z",
+  "steps": [
+    {
+      "index": 0,
+      "action": {
+        "type": "fill",
+        "selector": "#search-books-q",
+        "value": "left hand"
+      },
+      "title": "Harbor Library",
+      "forms": [
+        {
+          "selector": "#search-books",
+          "id": "search-books",
+          "toolTitle": "Search books",
+          "submitLabel": "Search",
+          "resultTarget": "book-results",
+          "fields": [
+            {
+              "name": "q",
+              "tag": "input",
+              "type": "text",
+              "required": true,
+              "label": "Title or author",
+              "value": "left hand",
+              "min": null,
+              "max": null,
+              "valueType": null
+            }
+          ]
+        },
+        {
+          "selector": "#place-hold",
+          "id": "place-hold",
+          "toolTitle": "Place hold",
+          "submitLabel": "Place hold",
+          "resultTarget": "outcome",
+          "fields": [
+            {
+              "name": "bookId",
+              "tag": "select",
+              "type": "select-one",
+              "required": true,
+              "label": "Book",
+              "options": [
+                {
+                  "value": "left-hand",
+                  "label": "The Left Hand of Darkness"
+                },
+                {
+                  "value": "kindred",
+                  "label": "Kindred"
+                },
+                {
+                  "value": "dispossessed",
+                  "label": "The Dispossessed"
+                }
+              ],
+              "value": "left-hand",
+              "min": null,
+              "max": null,
+              "valueType": null
+            },
+            {
+              "name": "card",
+              "tag": "input",
+              "type": "text",
+              "required": true,
+              "label": "Card number",
+              "value": "",
+              "min": null,
+              "max": null,
+              "valueType": null
+            },
+            {
+              "name": "name",
+              "tag": "input",
+              "type": "text",
+              "required": true,
+              "label": "Name on card",
+              "value": "",
+              "min": null,
+              "max": null,
+              "valueType": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "action": {
+        "type": "click",
+        "selector": "#search-books button[type=submit]"
+      },
+      "title": "Harbor Library",
+      "forms": [
+        {
+          "selector": "#search-books",
+          "id": "search-books",
+          "toolTitle": "Search books",
+          "submitLabel": "Search",
+          "resultTarget": "book-results",
+          "fields": [
+            {
+              "name": "q",
+              "tag": "input",
+              "type": "text",
+              "required": true,
+              "label": "Title or author",
+              "value": "left hand",
+              "min": null,
+              "max": null,
+              "valueType": null
+            }
+          ]
+        },
+        {
+          "selector": "#place-hold",
+          "id": "place-hold",
+          "toolTitle": "Place hold",
+          "submitLabel": "Place hold",
+          "resultTarget": "outcome",
+          "fields": [
+            {
+              "name": "bookId",
+              "tag": "select",
+              "type": "select-one",
+              "required": true,
+              "label": "Book",
+              "options": [
+                {
+                  "value": "left-hand",
+                  "label": "The Left Hand of Darkness"
+                },
+                {
+                  "value": "kindred",
+                  "label": "Kindred"
+                },
+                {
+                  "value": "dispossessed",
+                  "label": "The Dispossessed"
+                }
+              ],
+              "value": "left-hand",
+              "min": null,
+              "max": null,
+              "valueType": null
+            },
+            {
+              "name": "card",
+              "tag": "input",
+              "type": "text",
+              "required": true,
+              "label": "Card number",
+              "value": "",
+              "min": null,
+              "max": null,
+              "valueType": null
+            },
+            {
+              "name": "name",
+              "tag": "input",
+              "type": "text",
+              "required": true,
+              "label": "Name on card",
+              "value": "",
+              "min": null,
+              "max": null,
+              "valueType": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "action": {
+        "type": "click",
+        "selector": "[data-nav=reserve]"
+      },
+      "title": "Harbor Library",
+      "forms": [
+        {
+          "selector": "#search-books",
+          "id": "search-books",
+          "toolTitle": "Search books",
+          "submitLabel": "Search",
+          "resultTarget": "book-results",
+          "fields": [
+            {
+              "name": "q",
+              "tag": "input",
+              "type": "text",
+              "required": true,
+              "label": "Title or author",
+              "value": "left hand",
+              "min": null,
+              "max": null,
+              "valueType": null
+            }
+          ]
+        },
+        {
+          "selector": "#place-hold",
+          "id": "place-hold",
+          "toolTitle": "Place hold",
+          "submitLabel": "Place hold",
+          "resultTarget": "outcome",
+          "fields": [
+            {
+              "name": "bookId",
+              "tag": "select",
+              "type": "select-one",
+              "required": true,
+              "label": "Book",
+              "options": [
+                {
+                  "value": "left-hand",
+                  "label": "The Left Hand of Darkness"
+                },
+                {
+                  "value": "kindred",
+                  "label": "Kindred"
+                },
+                {
+                  "value": "dispossessed",
+                  "label": "The Dispossessed"
+                }
+              ],
+              "value": "left-hand",
+              "min": null,
+              "max": null,
+              "valueType": null
+            },
+            {
+              "name": "card",
+              "tag": "input",
+              "type": "text",
+              "required": true,
+              "label": "Card number",
+              "value": "",
+              "min": null,
+              "max": null,
+              "valueType": null
+            },
+            {
+              "name": "name",
+              "tag": "input",
+              "type": "text",
+              "required": true,
+              "label": "Name on card",
+              "value": "",
+              "min": null,
+              "max": null,
+              "valueType": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "action": {
+        "type": "select",
+        "selector": "#place-hold-bookId",
+        "value": "left-hand"
+      },
+      "title": "Harbor Library",
+      "forms": [
+        {
+          "selector": "#search-books",
+          "id": "search-books",
+          "toolTitle": "Search books",
+          "submitLabel": "Search",
+          "resultTarget": "book-results",
+          "fields": [
+            {
+              "name": "q",
+              "tag": "input",
+              "type": "text",
+              "required": true,
+              "label": "Title or author",
+              "value": "left hand",
+              "min": null,
+              "max": null,
+              "valueType": null
+            }
+          ]
+        },
+        {
+          "selector": "#place-hold",
+          "id": "place-hold",
+          "toolTitle": "Place hold",
+          "submitLabel": "Place hold",
+          "resultTarget": "outcome",
+          "fields": [
+            {
+              "name": "bookId",
+              "tag": "select",
+              "type": "select-one",
+              "required": true,
+              "label": "Book",
+              "options": [
+                {
+                  "value": "left-hand",
+                  "label": "The Left Hand of Darkness"
+                },
+                {
+                  "value": "kindred",
+                  "label": "Kindred"
+                },
+                {
+                  "value": "dispossessed",
+                  "label": "The Dispossessed"
+                }
+              ],
+              "value": "left-hand",
+              "min": null,
+              "max": null,
+              "valueType": null
+            },
+            {
+              "name": "card",
+              "tag": "input",
+              "type": "text",
+              "required": true,
+              "label": "Card number",
+              "value": "",
+              "min": null,
+              "max": null,
+              "valueType": null
+            },
+            {
+              "name": "name",
+              "tag": "input",
+              "type": "text",
+              "required": true,
+              "label": "Name on card",
+              "value": "",
+              "min": null,
+              "max": null,
+              "valueType": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "action": {
+        "type": "fill",
+        "selector": "#place-hold-card",
+        "value": "440011"
+      },
+      "title": "Harbor Library",
+      "forms": [
+        {
+          "selector": "#search-books",
+          "id": "search-books",
+          "toolTitle": "Search books",
+          "submitLabel": "Search",
+          "resultTarget": "book-results",
+          "fields": [
+            {
+              "name": "q",
+              "tag": "input",
+              "type": "text",
+              "required": true,
+              "label": "Title or author",
+              "value": "left hand",
+              "min": null,
+              "max": null,
+              "valueType": null
+            }
+          ]
+        },
+        {
+          "selector": "#place-hold",
+          "id": "place-hold",
+          "toolTitle": "Place hold",
+          "submitLabel": "Place hold",
+          "resultTarget": "outcome",
+          "fields": [
+            {
+              "name": "bookId",
+              "tag": "select",
+              "type": "select-one",
+              "required": true,
+              "label": "Book",
+              "options": [
+                {
+                  "value": "left-hand",
+                  "label": "The Left Hand of Darkness"
+                },
+                {
+                  "value": "kindred",
+                  "label": "Kindred"
+                },
+                {
+                  "value": "dispossessed",
+                  "label": "The Dispossessed"
+                }
+              ],
+              "value": "left-hand",
+              "min": null,
+              "max": null,
+              "valueType": null
+            },
+            {
+              "name": "card",
+              "tag": "input",
+              "type": "text",
+              "required": true,
+              "label": "Card number",
+              "value": "440011",
+              "min": null,
+              "max": null,
+              "valueType": null
+            },
+            {
+              "name": "name",
+              "tag": "input",
+              "type": "text",
+              "required": true,
+              "label": "Name on card",
+              "value": "",
+              "min": null,
+              "max": null,
+              "valueType": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "action": {
+        "type": "fill",
+        "selector": "#place-hold-name",
+        "value": "June Harlow"
+      },
+      "title": "Harbor Library",
+      "forms": [
+        {
+          "selector": "#search-books",
+          "id": "search-books",
+          "toolTitle": "Search books",
+          "submitLabel": "Search",
+          "resultTarget": "book-results",
+          "fields": [
+            {
+              "name": "q",
+              "tag": "input",
+              "type": "text",
+              "required": true,
+              "label": "Title or author",
+              "value": "left hand",
+              "min": null,
+              "max": null,
+              "valueType": null
+            }
+          ]
+        },
+        {
+          "selector": "#place-hold",
+          "id": "place-hold",
+          "toolTitle": "Place hold",
+          "submitLabel": "Place hold",
+          "resultTarget": "outcome",
+          "fields": [
+            {
+              "name": "bookId",
+              "tag": "select",
+              "type": "select-one",
+              "required": true,
+              "label": "Book",
+              "options": [
+                {
+                  "value": "left-hand",
+                  "label": "The Left Hand of Darkness"
+                },
+                {
+                  "value": "kindred",
+                  "label": "Kindred"
+                },
+                {
+                  "value": "dispossessed",
+                  "label": "The Dispossessed"
+                }
+              ],
+              "value": "left-hand",
+              "min": null,
+              "max": null,
+              "valueType": null
+            },
+            {
+              "name": "card",
+              "tag": "input",
+              "type": "text",
+              "required": true,
+              "label": "Card number",
+              "value": "440011",
+              "min": null,
+              "max": null,
+              "valueType": null
+            },
+            {
+              "name": "name",
+              "tag": "input",
+              "type": "text",
+              "required": true,
+              "label": "Name on card",
+              "value": "June Harlow",
+              "min": null,
+              "max": null,
+              "valueType": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "action": {
+        "type": "click",
+        "selector": "#place-hold button[type=submit]"
+      },
+      "title": "Harbor Library",
+      "forms": [
+        {
+          "selector": "#search-books",
+          "id": "search-books",
+          "toolTitle": "Search books",
+          "submitLabel": "Search",
+          "resultTarget": "book-results",
+          "fields": [
+            {
+              "name": "q",
+              "tag": "input",
+              "type": "text",
+              "required": true,
+              "label": "Title or author",
+              "value": "left hand",
+              "min": null,
+              "max": null,
+              "valueType": null
+            }
+          ]
+        },
+        {
+          "selector": "#place-hold",
+          "id": "place-hold",
+          "toolTitle": "Place hold",
+          "submitLabel": "Place hold",
+          "resultTarget": "outcome",
+          "fields": [
+            {
+              "name": "bookId",
+              "tag": "select",
+              "type": "select-one",
+              "required": true,
+              "label": "Book",
+              "options": [
+                {
+                  "value": "left-hand",
+                  "label": "The Left Hand of Darkness"
+                },
+                {
+                  "value": "kindred",
+                  "label": "Kindred"
+                },
+                {
+                  "value": "dispossessed",
+                  "label": "The Dispossessed"
+                }
+              ],
+              "value": "left-hand",
+              "min": null,
+              "max": null,
+              "valueType": null
+            },
+            {
+              "name": "card",
+              "tag": "input",
+              "type": "text",
+              "required": true,
+              "label": "Card number",
+              "value": "440011",
+              "min": null,
+              "max": null,
+              "valueType": null
+            },
+            {
+              "name": "name",
+              "tag": "input",
+              "type": "text",
+              "required": true,
+              "label": "Name on card",
+              "value": "June Harlow",
+              "min": null,
+              "max": null,
+              "valueType": null
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "requests": [
+    {
+      "afterStep": 1,
+      "transport": "xhr",
+      "method": "GET",
+      "pathname": "/api/books",
+      "search": "?q=left+hand",
+      "requestBody": null,
+      "status": 200,
+      "responseBody": "{\"books\":[{\"id\":\"left-hand\",\"title\":\"The Left Hand of Darkness\",\"author\":\"Ursula K. Le Guin\"}]}"
+    },
+    {
+      "afterStep": 6,
+      "transport": "fetch",
+      "method": "POST",
+      "pathname": "/api/holds",
+      "search": "",
+      "requestBody": "{\"bookId\":\"left-hand\",\"card\":\"440011\",\"name\":\"June Harlow\"}",
+      "status": 201,
+      "responseBody": "{\"hold\":{\"id\":\"HL-501\",\"bookId\":\"left-hand\",\"name\":\"June Harlow\"}}"
+    }
+  ]
+}
