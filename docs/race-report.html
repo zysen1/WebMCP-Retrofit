@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>WebMCP Retrofit race</title>
+  <style>
+    :root { color-scheme: light; }
+    body { margin: 0; background: #f3ecdf; color: #1d1a16; font: 15px/1.4 "Segoe UI", sans-serif; }
+    main { width: min(1040px, calc(100% - 32px)); margin: 0 auto; padding: 28px 0 48px; }
+    h1 { font: 600 36px Georgia, serif; margin: 0 0 6px; }
+    .kicker { letter-spacing: 0.08em; text-transform: uppercase; color: #0e6b52; font-size: 12px; margin: 0; }
+    .pin { color: #5c564c; font-size: 13px; }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 18px 0; }
+    article { background: #fffaf3; border: 1px solid #d9d0c1; border-radius: 14px; padding: 16px; }
+    h2 { margin: 0 0 8px; font: 600 22px Georgia, serif; }
+    .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 10px 0; }
+    .stat { background: #f6f1e7; border-radius: 10px; padding: 8px; }
+    .stat b { display: block; font-size: 22px; }
+    .stat span { color: #5c564c; font-size: 12px; }
+    .meter { display: grid; grid-template-columns: 72px 1fr; gap: 8px; align-items: center; margin: 6px 0; font-size: 13px; }
+    .track { background: #efe6d6; border-radius: 999px; height: 10px; }
+    .bar { display: block; height: 10px; border-radius: 999px; background: #0e6b52; }
+    article.shot .bar { background: #9a3412; }
+    ol { margin: 8px 0 0; padding: 0; list-style: none; max-height: 220px; overflow: auto; }
+    li { display: flex; gap: 8px; font-size: 12px; padding: 3px 0; border-top: 1px solid #efe6d6; }
+    li span { color: #5c564c; width: 1.5em; }
+    table { width: 100%; border-collapse: collapse; background: #fffaf3; }
+    th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid #d9d0c1; }
+    .note { color: #5c564c; font-size: 13px; }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="kicker">Offline demo · mock policies · no API key</p>
+    <h1>Same order, two agents</h1>
+    <p class="pin">WebMCP pin <code>f14762e63607</code> · <code>document.modelContext</code> · polyfill consulted @mcp-b/webmcp-polyfill@6.0.3</p>
+    <p>Northwind Nook: 2 × Cedar Camp Mug, ash glaze, size M, standard shipping, for ada@analytical.example. Contract pass rate on the local demo set: <strong>100.0%</strong> (93/93).</p>
+    <div class="grid">
+      <article class="shot">
+        <h2>Screenshot and click</h2>
+        <div class="stats">
+          <div class="stat"><b>53</b><span>steps</span></div>
+          <div class="stat"><b>37,572</b><span>estimated tokens</span></div>
+          <div class="stat"><b>2.01s</b><span>task time</span></div>
+        </div>
+        <div class="meter"><span>tokens</span><div class="track"><span class="bar" style="width:100%"></span></div></div>
+        <div class="meter"><span>time</span><div class="track"><span class="bar" style="width:100%"></span></div></div>
+        <p class="note">27 screenshots · 26 UI actions · 0 tool calls · order NW-1002</p>
+        <ol><li><span>1</span> screenshot · 1280x720 plus accessibility text · 1243 tok</li><li><span>2</span> fill · #search-catalog-q = cedar · 16 tok</li><li><span>3</span> screenshot · 1280x720 plus accessibility text · 1244 tok</li><li><span>4</span> select · #search-catalog-category = drinkware · 19 tok</li><li><span>5</span> screenshot · 1280x720 plus accessibility text · 1244 tok</li><li><span>6</span> click · #search-catalog button[type=submit] · 17 tok</li><li><span>7</span> screenshot · 1280x720 plus accessibility text · 1255 tok</li><li><span>8</span> click · [data-open-product="cedar-mug"] · 16 tok</li><li>… 45 more steps in results.json</li></ol>
+      </article>
+      <article>
+        <h2>WebMCP</h2>
+        <div class="stats">
+          <div class="stat"><b>3</b><span>tool calls</span></div>
+          <div class="stat"><b>1,148</b><span>estimated tokens</span></div>
+          <div class="stat"><b>0.04s</b><span>task time</span></div>
+        </div>
+        <div class="meter"><span>tokens</span><div class="track"><span class="bar" style="width:3%"></span></div></div>
+        <div class="meter"><span>time</span><div class="track"><span class="bar" style="width:2%"></span></div></div>
+        <p class="note">818 catalog tokens included · 0 screenshots · order NW-1001</p>
+        <ol><li><span>1</span> tool_call · search_catalog · 70 tok</li><li><span>2</span> tool_call · add_to_cart · 87 tok</li><li><span>3</span> tool_call · place_order · 173 tok</li></ol>
+      </article>
+    </div>
+    <h2>Contract tests on the local demo sites</h2>
+    <table>
+      <thead><tr><th>Site</th><th>Tools</th><th>Checks</th><th>Pass rate</th></tr></thead>
+      <tbody><tr><td>shop</td><td>3</td><td>25/25</td><td>100.0%</td></tr><tr><td>library</td><td>2</td><td>17/17</td><td>100.0%</td></tr><tr><td>support</td><td>2</td><td>17/17</td><td>100.0%</td></tr><tr><td>booking</td><td>2</td><td>17/17</td><td>100.0%</td></tr><tr><td>pantry</td><td>2</td><td>17/17</td><td>100.0%</td></tr></tbody>
+    </table>
+    <p class="note">A screenshot-and-click step is one captured screenshot or one UI action. A WebMCP step is one tool call. Tool-catalog tokens are included in the WebMCP total and are not an extra step. Text tokens are ceil(chars / 4). Screenshot tokens use the published gpt-4o tile count (85 + 170 per 512px tile after the 2048/768 rescale) plus the accessibility-tree text. These are estimates, not a provider bill. Real-LLM comparison: WIP. Dataset: bundled local demo sites: shop, library, support, booking, pantry. Measured 2026-10-19T12:47:24.038Z.</p>
+  </main>
+</body>
+</html>

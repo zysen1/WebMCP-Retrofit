@@ -1,0 +1,153 @@
+{
+  "siteId": "library",
+  "specPin": {
+    "specRepo": "https://github.com/webmachinelearning/webmcp",
+    "specCommit": "f14762e63607bf96592b1a7a6392cd2b047b8209",
+    "specCommitDate": "2026-10-16",
+    "specCommitMessage": "Editorial: sync explainers with spec (#350)",
+    "api": "document.modelContext",
+    "methods": [
+      "registerTool",
+      "getTools",
+      "executeTool"
+    ],
+    "event": "toolchange",
+    "deprecatedAliasNotEmitted": "navigator.modelContext",
+    "removedMethodsNotEmitted": [
+      "provideContext",
+      "clearContext"
+    ],
+    "polyfillPackage": "@mcp-b/webmcp-polyfill",
+    "polyfillVersion": "6.0.3",
+    "polyfillUpstreamRevision": "6bf6c57bbaf3d1173d7737cfb79572632d9b7871",
+    "chromeDocsUpdated": "2026-10-16",
+    "checkedOn": "2026-10-19"
+  },
+  "tools": [
+    {
+      "name": "search_books",
+      "title": "Search books",
+      "description": "Search books. Recorded user flow submitted #search-books via XMLHttpRequest GET /api/books. Inputs: q (Title or author).",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "q": {
+            "type": "string",
+            "description": "Title or author"
+          }
+        },
+        "required": [
+          "q"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "untrustedContentHint": false,
+        "consequentialHint": false,
+        "debugging": false
+      },
+      "exampleInput": {
+        "q": "left hand"
+      },
+      "plan": {
+        "formSelector": "#search-books",
+        "resultTarget": "book-results",
+        "fields": [
+          {
+            "name": "q",
+            "kind": "string",
+            "required": true
+          }
+        ],
+        "expect": {
+          "method": "GET",
+          "pathname": "/api/books",
+          "transport": "xhr",
+          "status": 200,
+          "responseKeys": [
+            "books"
+          ],
+          "ui": "results"
+        }
+      },
+      "order": 1
+    },
+    {
+      "name": "place_hold",
+      "title": "Place hold",
+      "description": "Place hold. Recorded user flow submitted #place-hold via fetch POST /api/holds. Inputs: bookId (Book), card (Card number), name (Name on card).",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "bookId": {
+            "type": "string",
+            "description": "Book",
+            "enum": [
+              "left-hand",
+              "kindred",
+              "dispossessed"
+            ]
+          },
+          "card": {
+            "type": "string",
+            "description": "Card number"
+          },
+          "name": {
+            "type": "string",
+            "description": "Name on card"
+          }
+        },
+        "required": [
+          "bookId",
+          "card",
+          "name"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": false,
+        "untrustedContentHint": false,
+        "consequentialHint": true,
+        "debugging": false
+      },
+      "exampleInput": {
+        "bookId": "left-hand",
+        "card": "440011",
+        "name": "June Harlow"
+      },
+      "plan": {
+        "formSelector": "#place-hold",
+        "resultTarget": "outcome",
+        "fields": [
+          {
+            "name": "bookId",
+            "kind": "string",
+            "required": true
+          },
+          {
+            "name": "card",
+            "kind": "string",
+            "required": true
+          },
+          {
+            "name": "name",
+            "kind": "string",
+            "required": true
+          }
+        ],
+        "expect": {
+          "method": "POST",
+          "pathname": "/api/holds",
+          "transport": "fetch",
+          "status": 201,
+          "responseKeys": [
+            "hold"
+          ],
+          "ui": "outcome"
+        }
+      },
+      "order": 6
+    }
+  ]
+}

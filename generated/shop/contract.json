@@ -1,0 +1,446 @@
+{
+  "siteId": "shop",
+  "specPin": {
+    "specRepo": "https://github.com/webmachinelearning/webmcp",
+    "specCommit": "f14762e63607bf96592b1a7a6392cd2b047b8209",
+    "specCommitDate": "2026-10-16",
+    "specCommitMessage": "Editorial: sync explainers with spec (#350)",
+    "api": "document.modelContext",
+    "methods": [
+      "registerTool",
+      "getTools",
+      "executeTool"
+    ],
+    "event": "toolchange",
+    "deprecatedAliasNotEmitted": "navigator.modelContext",
+    "removedMethodsNotEmitted": [
+      "provideContext",
+      "clearContext"
+    ],
+    "polyfillPackage": "@mcp-b/webmcp-polyfill",
+    "polyfillVersion": "6.0.3",
+    "polyfillUpstreamRevision": "6bf6c57bbaf3d1173d7737cfb79572632d9b7871",
+    "chromeDocsUpdated": "2026-10-16",
+    "checkedOn": "2026-10-19"
+  },
+  "tools": [
+    {
+      "name": "search_catalog",
+      "title": "Search catalog",
+      "description": "Search catalog. Recorded user flow submitted #search-catalog via fetch GET /api/products. Inputs: q (Search), category (Category).",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "q": {
+            "type": "string",
+            "description": "Search"
+          },
+          "category": {
+            "type": "string",
+            "description": "Category",
+            "enum": [
+              "all",
+              "drinkware",
+              "textiles"
+            ]
+          }
+        },
+        "required": [
+          "q",
+          "category"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "untrustedContentHint": false,
+        "consequentialHint": false,
+        "debugging": false
+      },
+      "exampleInput": {
+        "q": "cedar",
+        "category": "drinkware"
+      },
+      "plan": {
+        "formSelector": "#search-catalog",
+        "resultTarget": "search-results",
+        "fields": [
+          {
+            "name": "q",
+            "kind": "string",
+            "required": true
+          },
+          {
+            "name": "category",
+            "kind": "string",
+            "required": true
+          }
+        ],
+        "expect": {
+          "method": "GET",
+          "pathname": "/api/products",
+          "transport": "fetch",
+          "status": 200,
+          "responseKeys": [
+            "products"
+          ],
+          "ui": "results"
+        }
+      },
+      "order": 2
+    },
+    {
+      "name": "add_to_cart",
+      "title": "Add to cart",
+      "description": "Add to cart. Recorded user flow submitted #add-to-cart via fetch POST /api/cart. Inputs: sku (Product), size (Size), glaze (Glaze), qty (Quantity).",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "sku": {
+            "type": "string",
+            "description": "Product",
+            "enum": [
+              "cedar-mug",
+              "linen-towel",
+              "ash-bowl",
+              "wool-cap"
+            ]
+          },
+          "size": {
+            "type": "string",
+            "description": "Size",
+            "enum": [
+              "M",
+              "L"
+            ]
+          },
+          "glaze": {
+            "type": "string",
+            "description": "Glaze",
+            "enum": [
+              "ash",
+              "sand"
+            ]
+          },
+          "qty": {
+            "type": "number",
+            "description": "Quantity",
+            "minimum": 1,
+            "maximum": 9
+          }
+        },
+        "required": [
+          "sku",
+          "size",
+          "glaze",
+          "qty"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": false,
+        "untrustedContentHint": false,
+        "consequentialHint": false,
+        "debugging": false
+      },
+      "exampleInput": {
+        "sku": "cedar-mug",
+        "size": "M",
+        "glaze": "ash",
+        "qty": 2
+      },
+      "plan": {
+        "formSelector": "#add-to-cart",
+        "resultTarget": "cart-summary",
+        "fields": [
+          {
+            "name": "sku",
+            "kind": "string",
+            "required": true
+          },
+          {
+            "name": "size",
+            "kind": "string",
+            "required": true
+          },
+          {
+            "name": "glaze",
+            "kind": "string",
+            "required": true
+          },
+          {
+            "name": "qty",
+            "kind": "number",
+            "required": true
+          }
+        ],
+        "expect": {
+          "method": "POST",
+          "pathname": "/api/cart",
+          "transport": "fetch",
+          "status": 201,
+          "responseKeys": [
+            "line"
+          ],
+          "ui": "results"
+        }
+      },
+      "order": 7
+    },
+    {
+      "name": "place_order",
+      "title": "Place order",
+      "description": "Place order. Recorded user flow submitted #place-order via XMLHttpRequest POST /api/checkout. Inputs: sku (Product sku), size (Line size), glaze (Line glaze), qty (Line quantity), fullName (Full name), email (Email), phone (Phone), address1 (Address), address2 (Address line 2), city (City), region (Region), postal (Postal code), shipping (Shipping), cardName (Name on mock card), cardNumber (Mock card number), exp (Expiry), cvc (CVC), notes (Notes), terms (I agree to the mock terms).",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "sku": {
+            "type": "string",
+            "description": "Product sku"
+          },
+          "size": {
+            "type": "string",
+            "description": "Line size"
+          },
+          "glaze": {
+            "type": "string",
+            "description": "Line glaze"
+          },
+          "qty": {
+            "type": "number",
+            "description": "Line quantity"
+          },
+          "fullName": {
+            "type": "string",
+            "description": "Full name"
+          },
+          "email": {
+            "type": "string",
+            "description": "Email",
+            "format": "email"
+          },
+          "phone": {
+            "type": "string",
+            "description": "Phone"
+          },
+          "address1": {
+            "type": "string",
+            "description": "Address"
+          },
+          "address2": {
+            "type": "string",
+            "description": "Address line 2"
+          },
+          "city": {
+            "type": "string",
+            "description": "City"
+          },
+          "region": {
+            "type": "string",
+            "description": "Region",
+            "enum": [
+              "CA",
+              "NY",
+              "WA"
+            ]
+          },
+          "postal": {
+            "type": "string",
+            "description": "Postal code"
+          },
+          "shipping": {
+            "type": "string",
+            "description": "Shipping",
+            "enum": [
+              "standard",
+              "express"
+            ]
+          },
+          "cardName": {
+            "type": "string",
+            "description": "Name on mock card"
+          },
+          "cardNumber": {
+            "type": "string",
+            "description": "Mock card number"
+          },
+          "exp": {
+            "type": "string",
+            "description": "Expiry"
+          },
+          "cvc": {
+            "type": "string",
+            "description": "CVC"
+          },
+          "notes": {
+            "type": "string",
+            "description": "Notes"
+          },
+          "terms": {
+            "type": "boolean",
+            "description": "I agree to the mock terms"
+          }
+        },
+        "required": [
+          "sku",
+          "size",
+          "glaze",
+          "qty",
+          "fullName",
+          "email",
+          "phone",
+          "address1",
+          "city",
+          "region",
+          "postal",
+          "shipping",
+          "cardName",
+          "cardNumber",
+          "exp",
+          "cvc",
+          "terms"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": false,
+        "untrustedContentHint": false,
+        "consequentialHint": true,
+        "debugging": false
+      },
+      "exampleInput": {
+        "sku": "cedar-mug",
+        "size": "M",
+        "glaze": "ash",
+        "qty": 2,
+        "fullName": "Ada Lovelace",
+        "email": "ada@analytical.example",
+        "phone": "206-555-0142",
+        "address1": "1 Analytical Engine Way",
+        "address2": "Apt 4",
+        "city": "Seattle",
+        "region": "WA",
+        "postal": "98101",
+        "shipping": "standard",
+        "cardName": "Ada Lovelace",
+        "cardNumber": "4242424242424242",
+        "exp": "12/30",
+        "cvc": "123",
+        "notes": "Leave at the side door",
+        "terms": true
+      },
+      "plan": {
+        "formSelector": "#place-order",
+        "resultTarget": "outcome",
+        "fields": [
+          {
+            "name": "sku",
+            "kind": "string",
+            "required": true
+          },
+          {
+            "name": "size",
+            "kind": "string",
+            "required": true
+          },
+          {
+            "name": "glaze",
+            "kind": "string",
+            "required": true
+          },
+          {
+            "name": "qty",
+            "kind": "number",
+            "required": true
+          },
+          {
+            "name": "fullName",
+            "kind": "string",
+            "required": true
+          },
+          {
+            "name": "email",
+            "kind": "string",
+            "required": true
+          },
+          {
+            "name": "phone",
+            "kind": "string",
+            "required": true
+          },
+          {
+            "name": "address1",
+            "kind": "string",
+            "required": true
+          },
+          {
+            "name": "address2",
+            "kind": "string",
+            "required": false
+          },
+          {
+            "name": "city",
+            "kind": "string",
+            "required": true
+          },
+          {
+            "name": "region",
+            "kind": "string",
+            "required": true
+          },
+          {
+            "name": "postal",
+            "kind": "string",
+            "required": true
+          },
+          {
+            "name": "shipping",
+            "kind": "string",
+            "required": true
+          },
+          {
+            "name": "cardName",
+            "kind": "string",
+            "required": true
+          },
+          {
+            "name": "cardNumber",
+            "kind": "string",
+            "required": true
+          },
+          {
+            "name": "exp",
+            "kind": "string",
+            "required": true
+          },
+          {
+            "name": "cvc",
+            "kind": "string",
+            "required": true
+          },
+          {
+            "name": "notes",
+            "kind": "string",
+            "required": false
+          },
+          {
+            "name": "terms",
+            "kind": "boolean",
+            "required": true
+          }
+        ],
+        "expect": {
+          "method": "POST",
+          "pathname": "/api/checkout",
+          "transport": "xhr",
+          "status": 201,
+          "responseKeys": [
+            "order"
+          ],
+          "ui": "outcome"
+        }
+      },
+      "order": 25
+    }
+  ]
+}

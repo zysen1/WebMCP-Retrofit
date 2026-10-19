@@ -1,0 +1,36 @@
+WebMCP-Retrofit
+Copyright 2026 WebMCP-Retrofit contributors
+
+This product is original code under the Apache License, Version 2.0.
+See the LICENSE file.
+
+The generated snippets follow the WebMCP imperative surface. That
+specification is not vendored. It is pinned, as of 2026-10-19, to:
+
+  https://github.com/webmachinelearning/webmcp
+  commit f14762e63607bf96592b1a7a6392cd2b047b8209
+  (2026-10-16, "Editorial: sync explainers with spec (#350)")
+
+The same surface is described by the Chrome WebMCP imperative API
+documentation, last updated 2026-10-16:
+
+  https://developer.chrome.com/docs/ai/webmcp/imperative-api
+
+Polyfill behavior was checked against @mcp-b/webmcp-polyfill 6.0.3
+(MIT, Alex Nahas / MCP-B), which vendors upstream revision
+6bf6c57bbaf3d1173d7737cfb79572632d9b7871. That package's source is
+not copied. The in-repo modelContext implementation is original and
+covers the subset the offline demo needs: registerTool, getTools,
+executeTool, toolchange, and AbortSignal unregistration on
+document.modelContext. It does not install the deprecated
+navigator.modelContext alias.
+
+provideContext() and clearContext() were removed from the spec in
+https://github.com/webmachinelearning/webmcp/pull/132 (merged
+2026-03-05) and are not emitted.
+
+The image token estimate reimplements the published OpenAI vision
+tile count (rescale to fit 2048, shortest side 768, then
+85 + 170 tokens per 512px tile). No OpenAI source is included.
+Text tokens use the common ceil(chars / 4) approximation. Both are
+estimates for the offline race, not a provider bill.

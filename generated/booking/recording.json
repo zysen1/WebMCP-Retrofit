@@ -1,0 +1,969 @@
+{
+  "siteId": "booking",
+  "startedAt": "2026-10-19T12:47:21.065Z",
+  "steps": [
+    {
+      "index": 0,
+      "action": {
+        "type": "select",
+        "selector": "#search-slots-service",
+        "value": "cleaning"
+      },
+      "title": "Cedar Clinic",
+      "forms": [
+        {
+          "selector": "#search-slots",
+          "id": "search-slots",
+          "toolTitle": "Search slots",
+          "submitLabel": "Show slots",
+          "resultTarget": "slot-results",
+          "fields": [
+            {
+              "name": "service",
+              "tag": "select",
+              "type": "select-one",
+              "required": true,
+              "label": "Service",
+              "options": [
+                {
+                  "value": "cleaning",
+                  "label": "Cleaning"
+                },
+                {
+                  "value": "exam",
+                  "label": "Exam"
+                }
+              ],
+              "value": "cleaning",
+              "min": null,
+              "max": null,
+              "valueType": null
+            }
+          ]
+        },
+        {
+          "selector": "#book-visit",
+          "id": "book-visit",
+          "toolTitle": "Book visit",
+          "submitLabel": "Book visit",
+          "resultTarget": "outcome",
+          "fields": [
+            {
+              "name": "service",
+              "tag": "select",
+              "type": "select-one",
+              "required": true,
+              "label": "Service",
+              "options": [
+                {
+                  "value": "cleaning",
+                  "label": "Cleaning"
+                },
+                {
+                  "value": "exam",
+                  "label": "Exam"
+                }
+              ],
+              "value": "cleaning",
+              "min": null,
+              "max": null,
+              "valueType": null
+            },
+            {
+              "name": "slot",
+              "tag": "select",
+              "type": "select-one",
+              "required": true,
+              "label": "Slot",
+              "options": [
+                {
+                  "value": "tue-0900",
+                  "label": "Tue 09:00 (cleaning)"
+                },
+                {
+                  "value": "tue-1300",
+                  "label": "Tue 13:00 (cleaning)"
+                },
+                {
+                  "value": "wed-1000",
+                  "label": "Wed 10:00 (exam)"
+                }
+              ],
+              "value": "tue-0900",
+              "min": null,
+              "max": null,
+              "valueType": null
+            },
+            {
+              "name": "patient",
+              "tag": "input",
+              "type": "text",
+              "required": true,
+              "label": "Patient",
+              "value": "",
+              "min": null,
+              "max": null,
+              "valueType": null
+            },
+            {
+              "name": "email",
+              "tag": "input",
+              "type": "email",
+              "required": true,
+              "label": "Email",
+              "value": "",
+              "min": null,
+              "max": null,
+              "valueType": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "action": {
+        "type": "click",
+        "selector": "#search-slots button[type=submit]"
+      },
+      "title": "Cedar Clinic",
+      "forms": [
+        {
+          "selector": "#search-slots",
+          "id": "search-slots",
+          "toolTitle": "Search slots",
+          "submitLabel": "Show slots",
+          "resultTarget": "slot-results",
+          "fields": [
+            {
+              "name": "service",
+              "tag": "select",
+              "type": "select-one",
+              "required": true,
+              "label": "Service",
+              "options": [
+                {
+                  "value": "cleaning",
+                  "label": "Cleaning"
+                },
+                {
+                  "value": "exam",
+                  "label": "Exam"
+                }
+              ],
+              "value": "cleaning",
+              "min": null,
+              "max": null,
+              "valueType": null
+            }
+          ]
+        },
+        {
+          "selector": "#book-visit",
+          "id": "book-visit",
+          "toolTitle": "Book visit",
+          "submitLabel": "Book visit",
+          "resultTarget": "outcome",
+          "fields": [
+            {
+              "name": "service",
+              "tag": "select",
+              "type": "select-one",
+              "required": true,
+              "label": "Service",
+              "options": [
+                {
+                  "value": "cleaning",
+                  "label": "Cleaning"
+                },
+                {
+                  "value": "exam",
+                  "label": "Exam"
+                }
+              ],
+              "value": "cleaning",
+              "min": null,
+              "max": null,
+              "valueType": null
+            },
+            {
+              "name": "slot",
+              "tag": "select",
+              "type": "select-one",
+              "required": true,
+              "label": "Slot",
+              "options": [
+                {
+                  "value": "tue-0900",
+                  "label": "Tue 09:00 (cleaning)"
+                },
+                {
+                  "value": "tue-1300",
+                  "label": "Tue 13:00 (cleaning)"
+                },
+                {
+                  "value": "wed-1000",
+                  "label": "Wed 10:00 (exam)"
+                }
+              ],
+              "value": "tue-0900",
+              "min": null,
+              "max": null,
+              "valueType": null
+            },
+            {
+              "name": "patient",
+              "tag": "input",
+              "type": "text",
+              "required": true,
+              "label": "Patient",
+              "value": "",
+              "min": null,
+              "max": null,
+              "valueType": null
+            },
+            {
+              "name": "email",
+              "tag": "input",
+              "type": "email",
+              "required": true,
+              "label": "Email",
+              "value": "",
+              "min": null,
+              "max": null,
+              "valueType": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "action": {
+        "type": "click",
+        "selector": "[data-nav=book]"
+      },
+      "title": "Cedar Clinic",
+      "forms": [
+        {
+          "selector": "#search-slots",
+          "id": "search-slots",
+          "toolTitle": "Search slots",
+          "submitLabel": "Show slots",
+          "resultTarget": "slot-results",
+          "fields": [
+            {
+              "name": "service",
+              "tag": "select",
+              "type": "select-one",
+              "required": true,
+              "label": "Service",
+              "options": [
+                {
+                  "value": "cleaning",
+                  "label": "Cleaning"
+                },
+                {
+                  "value": "exam",
+                  "label": "Exam"
+                }
+              ],
+              "value": "cleaning",
+              "min": null,
+              "max": null,
+              "valueType": null
+            }
+          ]
+        },
+        {
+          "selector": "#book-visit",
+          "id": "book-visit",
+          "toolTitle": "Book visit",
+          "submitLabel": "Book visit",
+          "resultTarget": "outcome",
+          "fields": [
+            {
+              "name": "service",
+              "tag": "select",
+              "type": "select-one",
+              "required": true,
+              "label": "Service",
+              "options": [
+                {
+                  "value": "cleaning",
+                  "label": "Cleaning"
+                },
+                {
+                  "value": "exam",
+                  "label": "Exam"
+                }
+              ],
+              "value": "cleaning",
+              "min": null,
+              "max": null,
+              "valueType": null
+            },
+            {
+              "name": "slot",
+              "tag": "select",
+              "type": "select-one",
+              "required": true,
+              "label": "Slot",
+              "options": [
+                {
+                  "value": "tue-0900",
+                  "label": "Tue 09:00 (cleaning)"
+                },
+                {
+                  "value": "tue-1300",
+                  "label": "Tue 13:00 (cleaning)"
+                },
+                {
+                  "value": "wed-1000",
+                  "label": "Wed 10:00 (exam)"
+                }
+              ],
+              "value": "tue-0900",
+              "min": null,
+              "max": null,
+              "valueType": null
+            },
+            {
+              "name": "patient",
+              "tag": "input",
+              "type": "text",
+              "required": true,
+              "label": "Patient",
+              "value": "",
+              "min": null,
+              "max": null,
+              "valueType": null
+            },
+            {
+              "name": "email",
+              "tag": "input",
+              "type": "email",
+              "required": true,
+              "label": "Email",
+              "value": "",
+              "min": null,
+              "max": null,
+              "valueType": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "action": {
+        "type": "select",
+        "selector": "#book-visit-service",
+        "value": "cleaning"
+      },
+      "title": "Cedar Clinic",
+      "forms": [
+        {
+          "selector": "#search-slots",
+          "id": "search-slots",
+          "toolTitle": "Search slots",
+          "submitLabel": "Show slots",
+          "resultTarget": "slot-results",
+          "fields": [
+            {
+              "name": "service",
+              "tag": "select",
+              "type": "select-one",
+              "required": true,
+              "label": "Service",
+              "options": [
+                {
+                  "value": "cleaning",
+                  "label": "Cleaning"
+                },
+                {
+                  "value": "exam",
+                  "label": "Exam"
+                }
+              ],
+              "value": "cleaning",
+              "min": null,
+              "max": null,
+              "valueType": null
+            }
+          ]
+        },
+        {
+          "selector": "#book-visit",
+          "id": "book-visit",
+          "toolTitle": "Book visit",
+          "submitLabel": "Book visit",
+          "resultTarget": "outcome",
+          "fields": [
+            {
+              "name": "service",
+              "tag": "select",
+              "type": "select-one",
+              "required": true,
+              "label": "Service",
+              "options": [
+                {
+                  "value": "cleaning",
+                  "label": "Cleaning"
+                },
+                {
+                  "value": "exam",
+                  "label": "Exam"
+                }
+              ],
+              "value": "cleaning",
+              "min": null,
+              "max": null,
+              "valueType": null
+            },
+            {
+              "name": "slot",
+              "tag": "select",
+              "type": "select-one",
+              "required": true,
+              "label": "Slot",
+              "options": [
+                {
+                  "value": "tue-0900",
+                  "label": "Tue 09:00 (cleaning)"
+                },
+                {
+                  "value": "tue-1300",
+                  "label": "Tue 13:00 (cleaning)"
+                },
+                {
+                  "value": "wed-1000",
+                  "label": "Wed 10:00 (exam)"
+                }
+              ],
+              "value": "tue-0900",
+              "min": null,
+              "max": null,
+              "valueType": null
+            },
+            {
+              "name": "patient",
+              "tag": "input",
+              "type": "text",
+              "required": true,
+              "label": "Patient",
+              "value": "",
+              "min": null,
+              "max": null,
+              "valueType": null
+            },
+            {
+              "name": "email",
+              "tag": "input",
+              "type": "email",
+              "required": true,
+              "label": "Email",
+              "value": "",
+              "min": null,
+              "max": null,
+              "valueType": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "action": {
+        "type": "select",
+        "selector": "#book-visit-slot",
+        "value": "tue-0900"
+      },
+      "title": "Cedar Clinic",
+      "forms": [
+        {
+          "selector": "#search-slots",
+          "id": "search-slots",
+          "toolTitle": "Search slots",
+          "submitLabel": "Show slots",
+          "resultTarget": "slot-results",
+          "fields": [
+            {
+              "name": "service",
+              "tag": "select",
+              "type": "select-one",
+              "required": true,
+              "label": "Service",
+              "options": [
+                {
+                  "value": "cleaning",
+                  "label": "Cleaning"
+                },
+                {
+                  "value": "exam",
+                  "label": "Exam"
+                }
+              ],
+              "value": "cleaning",
+              "min": null,
+              "max": null,
+              "valueType": null
+            }
+          ]
+        },
+        {
+          "selector": "#book-visit",
+          "id": "book-visit",
+          "toolTitle": "Book visit",
+          "submitLabel": "Book visit",
+          "resultTarget": "outcome",
+          "fields": [
+            {
+              "name": "service",
+              "tag": "select",
+              "type": "select-one",
+              "required": true,
+              "label": "Service",
+              "options": [
+                {
+                  "value": "cleaning",
+                  "label": "Cleaning"
+                },
+                {
+                  "value": "exam",
+                  "label": "Exam"
+                }
+              ],
+              "value": "cleaning",
+              "min": null,
+              "max": null,
+              "valueType": null
+            },
+            {
+              "name": "slot",
+              "tag": "select",
+              "type": "select-one",
+              "required": true,
+              "label": "Slot",
+              "options": [
+                {
+                  "value": "tue-0900",
+                  "label": "Tue 09:00 (cleaning)"
+                },
+                {
+                  "value": "tue-1300",
+                  "label": "Tue 13:00 (cleaning)"
+                },
+                {
+                  "value": "wed-1000",
+                  "label": "Wed 10:00 (exam)"
+                }
+              ],
+              "value": "tue-0900",
+              "min": null,
+              "max": null,
+              "valueType": null
+            },
+            {
+              "name": "patient",
+              "tag": "input",
+              "type": "text",
+              "required": true,
+              "label": "Patient",
+              "value": "",
+              "min": null,
+              "max": null,
+              "valueType": null
+            },
+            {
+              "name": "email",
+              "tag": "input",
+              "type": "email",
+              "required": true,
+              "label": "Email",
+              "value": "",
+              "min": null,
+              "max": null,
+              "valueType": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "action": {
+        "type": "fill",
+        "selector": "#book-visit-patient",
+        "value": "Ada Lovelace"
+      },
+      "title": "Cedar Clinic",
+      "forms": [
+        {
+          "selector": "#search-slots",
+          "id": "search-slots",
+          "toolTitle": "Search slots",
+          "submitLabel": "Show slots",
+          "resultTarget": "slot-results",
+          "fields": [
+            {
+              "name": "service",
+              "tag": "select",
+              "type": "select-one",
+              "required": true,
+              "label": "Service",
+              "options": [
+                {
+                  "value": "cleaning",
+                  "label": "Cleaning"
+                },
+                {
+                  "value": "exam",
+                  "label": "Exam"
+                }
+              ],
+              "value": "cleaning",
+              "min": null,
+              "max": null,
+              "valueType": null
+            }
+          ]
+        },
+        {
+          "selector": "#book-visit",
+          "id": "book-visit",
+          "toolTitle": "Book visit",
+          "submitLabel": "Book visit",
+          "resultTarget": "outcome",
+          "fields": [
+            {
+              "name": "service",
+              "tag": "select",
+              "type": "select-one",
+              "required": true,
+              "label": "Service",
+              "options": [
+                {
+                  "value": "cleaning",
+                  "label": "Cleaning"
+                },
+                {
+                  "value": "exam",
+                  "label": "Exam"
+                }
+              ],
+              "value": "cleaning",
+              "min": null,
+              "max": null,
+              "valueType": null
+            },
+            {
+              "name": "slot",
+              "tag": "select",
+              "type": "select-one",
+              "required": true,
+              "label": "Slot",
+              "options": [
+                {
+                  "value": "tue-0900",
+                  "label": "Tue 09:00 (cleaning)"
+                },
+                {
+                  "value": "tue-1300",
+                  "label": "Tue 13:00 (cleaning)"
+                },
+                {
+                  "value": "wed-1000",
+                  "label": "Wed 10:00 (exam)"
+                }
+              ],
+              "value": "tue-0900",
+              "min": null,
+              "max": null,
+              "valueType": null
+            },
+            {
+              "name": "patient",
+              "tag": "input",
+              "type": "text",
+              "required": true,
+              "label": "Patient",
+              "value": "Ada Lovelace",
+              "min": null,
+              "max": null,
+              "valueType": null
+            },
+            {
+              "name": "email",
+              "tag": "input",
+              "type": "email",
+              "required": true,
+              "label": "Email",
+              "value": "",
+              "min": null,
+              "max": null,
+              "valueType": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "action": {
+        "type": "fill",
+        "selector": "#book-visit-email",
+        "value": "ada@analytical.example"
+      },
+      "title": "Cedar Clinic",
+      "forms": [
+        {
+          "selector": "#search-slots",
+          "id": "search-slots",
+          "toolTitle": "Search slots",
+          "submitLabel": "Show slots",
+          "resultTarget": "slot-results",
+          "fields": [
+            {
+              "name": "service",
+              "tag": "select",
+              "type": "select-one",
+              "required": true,
+              "label": "Service",
+              "options": [
+                {
+                  "value": "cleaning",
+                  "label": "Cleaning"
+                },
+                {
+                  "value": "exam",
+                  "label": "Exam"
+                }
+              ],
+              "value": "cleaning",
+              "min": null,
+              "max": null,
+              "valueType": null
+            }
+          ]
+        },
+        {
+          "selector": "#book-visit",
+          "id": "book-visit",
+          "toolTitle": "Book visit",
+          "submitLabel": "Book visit",
+          "resultTarget": "outcome",
+          "fields": [
+            {
+              "name": "service",
+              "tag": "select",
+              "type": "select-one",
+              "required": true,
+              "label": "Service",
+              "options": [
+                {
+                  "value": "cleaning",
+                  "label": "Cleaning"
+                },
+                {
+                  "value": "exam",
+                  "label": "Exam"
+                }
+              ],
+              "value": "cleaning",
+              "min": null,
+              "max": null,
+              "valueType": null
+            },
+            {
+              "name": "slot",
+              "tag": "select",
+              "type": "select-one",
+              "required": true,
+              "label": "Slot",
+              "options": [
+                {
+                  "value": "tue-0900",
+                  "label": "Tue 09:00 (cleaning)"
+                },
+                {
+                  "value": "tue-1300",
+                  "label": "Tue 13:00 (cleaning)"
+                },
+                {
+                  "value": "wed-1000",
+                  "label": "Wed 10:00 (exam)"
+                }
+              ],
+              "value": "tue-0900",
+              "min": null,
+              "max": null,
+              "valueType": null
+            },
+            {
+              "name": "patient",
+              "tag": "input",
+              "type": "text",
+              "required": true,
+              "label": "Patient",
+              "value": "Ada Lovelace",
+              "min": null,
+              "max": null,
+              "valueType": null
+            },
+            {
+              "name": "email",
+              "tag": "input",
+              "type": "email",
+              "required": true,
+              "label": "Email",
+              "value": "ada@analytical.example",
+              "min": null,
+              "max": null,
+              "valueType": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "action": {
+        "type": "click",
+        "selector": "#book-visit button[type=submit]"
+      },
+      "title": "Cedar Clinic",
+      "forms": [
+        {
+          "selector": "#search-slots",
+          "id": "search-slots",
+          "toolTitle": "Search slots",
+          "submitLabel": "Show slots",
+          "resultTarget": "slot-results",
+          "fields": [
+            {
+              "name": "service",
+              "tag": "select",
+              "type": "select-one",
+              "required": true,
+              "label": "Service",
+              "options": [
+                {
+                  "value": "cleaning",
+                  "label": "Cleaning"
+                },
+                {
+                  "value": "exam",
+                  "label": "Exam"
+                }
+              ],
+              "value": "cleaning",
+              "min": null,
+              "max": null,
+              "valueType": null
+            }
+          ]
+        },
+        {
+          "selector": "#book-visit",
+          "id": "book-visit",
+          "toolTitle": "Book visit",
+          "submitLabel": "Book visit",
+          "resultTarget": "outcome",
+          "fields": [
+            {
+              "name": "service",
+              "tag": "select",
+              "type": "select-one",
+              "required": true,
+              "label": "Service",
+              "options": [
+                {
+                  "value": "cleaning",
+                  "label": "Cleaning"
+                },
+                {
+                  "value": "exam",
+                  "label": "Exam"
+                }
+              ],
+              "value": "cleaning",
+              "min": null,
+              "max": null,
+              "valueType": null
+            },
+            {
+              "name": "slot",
+              "tag": "select",
+              "type": "select-one",
+              "required": true,
+              "label": "Slot",
+              "options": [
+                {
+                  "value": "tue-0900",
+                  "label": "Tue 09:00 (cleaning)"
+                },
+                {
+                  "value": "tue-1300",
+                  "label": "Tue 13:00 (cleaning)"
+                },
+                {
+                  "value": "wed-1000",
+                  "label": "Wed 10:00 (exam)"
+                }
+              ],
+              "value": "tue-0900",
+              "min": null,
+              "max": null,
+              "valueType": null
+            },
+            {
+              "name": "patient",
+              "tag": "input",
+              "type": "text",
+              "required": true,
+              "label": "Patient",
+              "value": "Ada Lovelace",
+              "min": null,
+              "max": null,
+              "valueType": null
+            },
+            {
+              "name": "email",
+              "tag": "input",
+              "type": "email",
+              "required": true,
+              "label": "Email",
+              "value": "ada@analytical.example",
+              "min": null,
+              "max": null,
+              "valueType": null
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "requests": [
+    {
+      "afterStep": 1,
+      "transport": "fetch",
+      "method": "GET",
+      "pathname": "/api/slots",
+      "search": "?service=cleaning",
+      "requestBody": null,
+      "status": 200,
+      "responseBody": "{\"slots\":[{\"id\":\"tue-0900\",\"service\":\"cleaning\",\"label\":\"Tue 09:00\"},{\"id\":\"tue-1300\",\"service\":\"cleaning\",\"label\":\"Tue 13:00\"}]}"
+    },
+    {
+      "afterStep": 7,
+      "transport": "xhr",
+      "method": "POST",
+      "pathname": "/api/appointments",
+      "search": "",
+      "requestBody": "{\"service\":\"cleaning\",\"slot\":\"tue-0900\",\"patient\":\"Ada Lovelace\",\"email\":\"ada@analytical.example\"}",
+      "status": 201,
+      "responseBody": "{\"appointment\":{\"id\":\"CV-301\",\"service\":\"cleaning\",\"slot\":\"tue-0900\",\"patient\":\"Ada Lovelace\",\"email\":\"ada@analytical.example\"}}"
+    }
+  ]
+}
